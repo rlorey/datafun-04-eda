@@ -13,41 +13,32 @@
 > Professional Python project: exploratory data analysis
 > including marimo and Jupyter notebooks.
 
-Notebooks combine narration and code.
-This project conducts an EDA using Python and also demonstrates
-two notebook options:
 
-- **marimo** - a reactive Python notebook that can run as an interactive app
-- **Jupyter** - a widely used notebook format for interactive data analysis
+# Data Exploratory Data Analysis (EDA) Project
 
-Note: With marimo, analysts can build interactive web apps!
-It's a whole new skill set, and not easy, but it does create
-engaging reports that showcase your analytic skills.
+## About the Project
+This repository is dedicated to learning and practicing **Exploratory Data Analysis (EDA)**. The goal of this project is to gain hands-on experience with foundational data science skills—including data cleaning, analyzing data distributions, handling missing values, and uncovering meaningful patterns or anomalies through statistical summaries and visual charts.
 
-## Motivation
+## Objectives
+* Perform thorough data cleaning and preprocessing.
+* Generate descriptive statistics to understand the data's structure.
+* Create data visualizations (e.g., histograms, scatter plots, box plots, and correlation matrices).
+* Document key insights and data stories discovered during exploration.
 
-When analysts receive a new dataset,
-they need to get to know it before deciding what questions it can answer.
-We look through the data, check its quality,
-examine how values are distributed, compare groups, and
-investigate patterns that might be interesting.
+## Technologies Used
+* **Python**
+* **marimo** for reactive, reproducible notebook development and data apps
+* **Jupyter Notebooks** for standard interactive computing and documentation
+* **Pandas** for data manipulation
+* **NumPy** for numerical operations
+* **Matplotlib** and **Seaborn** for data visualization
 
-In this project, we'll develop a repeatable way to explore a new dataset.
-We'll also use notebooks and interactive tools
-that let us combine Python, visualizations, results,
-and our own observations as we investigate the data.
+## Project Structure
+* `data/` - Contains the raw and processed datasets.
+* `notebooks/` - Contains both standard Jupyter Notebooks (`.ipynb`) and reactive `marimo` notebooks (`.py`) documenting the EDA process.
 
-## This Project
-
-This project introduces **Exploratory Data Analysis (EDA)** using notebooks.
-
-When we encounter a new dataset, we want to explore quickly:
-run checks, view distributions, identify missing values or outliers.
-Notebooks combine Markdown narrative with Python code cells
-and are ideal for this kind of investigation.
-
-You will run the example notebook, read the code and narrative,
-and create your own project to explore a tabular dataset.
+# run the Python module
+uv run python -m datafun.app
 
 ## Produced Artifacts
 
