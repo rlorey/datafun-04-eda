@@ -87,10 +87,8 @@ So a widget-building cell must depend only on what genuinely determines its opti
 
 import marimo
 
-__generated_with_marimo_version__ = "0.24.0"
+__generated_with = "0.24.0"
 app = marimo.App(width="medium")
-
-# === FIRST CELL IMPORTS AND RETURNS DEPS TO MAKE IT SELF-CONTAINED ===
 
 
 @app.cell
@@ -130,7 +128,6 @@ async def _():
         "flipper_length_mm",
         "body_mass_g",
     ]
-
     return (
         DATASET_NAME,
         NUMERIC_COLUMNS,
@@ -140,9 +137,6 @@ async def _():
         show_numeric_relationship,
         sys,
     )
-
-
-# === LOAD DATA (ITS OWN CELL, RUNS IN TWO ENVIRONMENTS) ===
 
 
 @app.cell
@@ -173,11 +167,7 @@ def _(DATASET_NAME, mo, pd, sys):
     else:
         data_path = notebook_location.parents[1] / "data" / "raw" / filename
         df = pd.read_csv(data_path)
-
     return (df,)
-
-
-# ===  TYPICALLY START WITH A MARKDOWN TITLE AND OPENING ===
 
 
 @app.cell
@@ -197,11 +187,8 @@ def _(mo):
     return
 
 
-# ===  CONTROL: CHOOSE THE DISTRIBUTION VARIABLE ===
-
-
 @app.cell
-def _choose_first_column(mo, NUMERIC_COLUMNS):
+def _choose_first_column(NUMERIC_COLUMNS, mo):
     """Build the numeric-variable dropdown for the distribution.
 
     Depends on `mo` and its fixed options `NUMERIC_COLUMNS`, and nothing the
@@ -218,11 +205,7 @@ def _choose_first_column(mo, NUMERIC_COLUMNS):
 
     # display
     numeric_column
-
     return (numeric_column,)
-
-
-# ===  RESULT: DISTRIBUTION OF THE CHOSEN VARIABLE ===
 
 
 @app.cell
@@ -242,13 +225,11 @@ def _show_distribution(df, numeric_column, show_numeric_distribution):
 
     # display
     distribution_ax
-
-
-# ===  CONTROL: CHOOSE THE X AND Y VARIABLES ===
+    return
 
 
 @app.cell
-def _choose_second_column(mo, NUMERIC_COLUMNS):
+def _choose_second_column(NUMERIC_COLUMNS, mo):
     """Build the X and Y dropdowns for the relationship scatter.
 
     Depends on `mo` and `NUMERIC_COLUMNS` only, so toggling other controls
@@ -275,14 +256,7 @@ def _choose_second_column(mo, NUMERIC_COLUMNS):
             y_column,
         ]
     )
-
-    return (
-        x_column,
-        y_column,
-    )
-
-
-# ===  RESULT: RELATIONSHIP BETWEEN X AND Y ===
+    return x_column, y_column
 
 
 @app.cell
@@ -303,9 +277,7 @@ def _show_relationship(df, show_numeric_relationship, x_column, y_column):
 
     # display it
     relationship_ax
-
-
-# ===  TYPICALLY END WITH A MARKDOWN SOURCE LINK AND CLOSING ===
+    return
 
 
 @app.cell
@@ -335,6 +307,22 @@ def _closing(mo, x_column, y_column):
 
     What question would you investigate next?
     """)
+    return
+
+
+@app.cell
+def _(mo):
+    _df = mo.sql(
+        f"""
+        SELECT * FROM
+        """
+    )
+    return
+
+
+@app.cell
+def _():
+    return
 
 
 if __name__ == "__main__":

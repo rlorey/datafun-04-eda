@@ -132,3 +132,2415 @@ body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  47
 2026-09-07 12:48:03 | INFO | P04 | ===================================
 2026-09-07 12:48:03 | INFO | P04 | END main() - Executed successfully!
 2026-09-07 12:48:03 | INFO | P04 | ===================================
+2026-09-07 13:58:50 | INFO | P04 | === RUN START ===
+2026-09-07 13:58:50 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-07 13:58:50 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-07 13:58:50 | INFO | P04 | python=3.14.7
+2026-09-07 13:58:50 | INFO | P04 | os=Darwin 23.5.0
+2026-09-07 13:58:50 | INFO | P04 | shell=zsh
+2026-09-07 13:58:50 | INFO | P04 | cwd=.
+2026-09-07 13:58:50 | INFO | P04 | github_actions=False
+2026-09-07 13:58:50 | INFO | P04 | ===================================
+2026-09-07 13:58:50 | INFO | P04 | START main()
+2026-09-07 13:58:50 | INFO | P04 | ===================================
+2026-09-07 13:58:50 | INFO | P04 | -------------------------------
+2026-09-07 13:58:50 | INFO | P04 | 01. LOAD the data.
+2026-09-07 13:58:50 | INFO | P04 | -------------------------------
+2026-09-07 13:58:50 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-07 13:58:50 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-07 13:58:50 | INFO | P04 | -------------------------------
+2026-09-07 13:58:50 | INFO | P04 | 02. INSPECT the data.
+2026-09-07 13:58:50 | INFO | P04 | -------------------------------
+2026-09-07 13:58:50 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-07 13:58:50 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-07 13:58:50 | INFO | P04 | -------------------------------
+2026-09-07 13:58:50 | INFO | P04 | 03. CHECK data quality.
+2026-09-07 13:58:50 | INFO | P04 | -------------------------------
+2026-09-07 13:58:50 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-07 13:58:50 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-07 13:58:50 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-07 13:58:50 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-07 13:58:50 | INFO | P04 | Duplicate rows detected: 0
+2026-09-07 13:58:50 | INFO | P04 | Duplicate rows: 0
+2026-09-07 13:58:50 | INFO | P04 | -------------------------------
+2026-09-07 13:58:50 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-07 13:58:50 | INFO | P04 | -------------------------------
+2026-09-07 13:58:50 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-07 13:58:50 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-07 13:58:50 | INFO | P04 | -------------------------------
+2026-09-07 13:58:50 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-07 13:58:50 | INFO | P04 | -------------------------------
+2026-09-07 13:58:51 | INFO | P04 | -------------------------------
+2026-09-07 13:58:51 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-07 13:58:51 | INFO | P04 | -------------------------------
+2026-09-07 13:58:51 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-07 13:58:51 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-07 13:58:51 | INFO | P04 | -------------------------------
+2026-09-07 13:58:51 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-07 13:58:51 | INFO | P04 | -------------------------------
+2026-09-07 13:58:51 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-07 13:58:51 | INFO | P04 | -------------------------------
+2026-09-07 13:58:51 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-07 13:58:51 | INFO | P04 | -------------------------------
+2026-09-07 13:58:51 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-07 13:58:51 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-07 14:01:26 | INFO | P04 | ===================================
+2026-09-07 14:01:26 | INFO | P04 | END main() - Executed successfully!
+2026-09-07 14:01:26 | INFO | P04 | ===================================
+2026-09-07 14:05:21 | INFO | P04 | === RUN START ===
+2026-09-07 14:05:21 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-07 14:05:21 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-07 14:05:21 | INFO | P04 | python=3.14.7
+2026-09-07 14:05:21 | INFO | P04 | os=Darwin 23.5.0
+2026-09-07 14:05:21 | INFO | P04 | shell=zsh
+2026-09-07 14:05:21 | INFO | P04 | cwd=.
+2026-09-07 14:05:21 | INFO | P04 | github_actions=False
+2026-09-07 14:05:21 | INFO | P04 | ===================================
+2026-09-07 14:05:21 | INFO | P04 | START main()
+2026-09-07 14:05:21 | INFO | P04 | ===================================
+2026-09-07 14:05:21 | INFO | P04 | -------------------------------
+2026-09-07 14:05:21 | INFO | P04 | 01. LOAD the data.
+2026-09-07 14:05:21 | INFO | P04 | -------------------------------
+2026-09-07 14:05:21 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-07 14:05:21 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-07 14:05:21 | INFO | P04 | -------------------------------
+2026-09-07 14:05:21 | INFO | P04 | 02. INSPECT the data.
+2026-09-07 14:05:21 | INFO | P04 | -------------------------------
+2026-09-07 14:05:21 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-07 14:05:21 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-07 14:05:21 | INFO | P04 | -------------------------------
+2026-09-07 14:05:21 | INFO | P04 | 03. CHECK data quality.
+2026-09-07 14:05:21 | INFO | P04 | -------------------------------
+2026-09-07 14:05:21 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-07 14:05:21 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-07 14:05:21 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-07 14:05:21 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-07 14:05:21 | INFO | P04 | Duplicate rows detected: 0
+2026-09-07 14:05:21 | INFO | P04 | Duplicate rows: 0
+2026-09-07 14:05:22 | INFO | P04 | -------------------------------
+2026-09-07 14:05:22 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-07 14:05:22 | INFO | P04 | -------------------------------
+2026-09-07 14:05:22 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-07 14:05:22 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-07 14:05:22 | INFO | P04 | -------------------------------
+2026-09-07 14:05:22 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-07 14:05:22 | INFO | P04 | -------------------------------
+2026-09-07 14:05:22 | INFO | P04 | -------------------------------
+2026-09-07 14:05:22 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-07 14:05:22 | INFO | P04 | -------------------------------
+2026-09-07 14:05:22 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-07 14:05:22 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-07 14:05:22 | INFO | P04 | -------------------------------
+2026-09-07 14:05:22 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-07 14:05:22 | INFO | P04 | -------------------------------
+2026-09-07 14:05:22 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-07 14:05:22 | INFO | P04 | -------------------------------
+2026-09-07 14:05:22 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-07 14:05:22 | INFO | P04 | -------------------------------
+2026-09-07 14:05:22 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-07 14:05:22 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-07 14:05:36 | INFO | P04 | ===================================
+2026-09-07 14:05:36 | INFO | P04 | END main() - Executed successfully!
+2026-09-07 14:05:36 | INFO | P04 | ===================================
+2026-09-08 09:59:21 | INFO | P04 | === RUN START ===
+2026-09-08 09:59:21 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 09:59:21 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 09:59:21 | INFO | P04 | python=3.14.7
+2026-09-08 09:59:21 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 09:59:21 | INFO | P04 | shell=zsh
+2026-09-08 09:59:21 | INFO | P04 | cwd=.
+2026-09-08 09:59:21 | INFO | P04 | github_actions=False
+2026-09-08 09:59:21 | INFO | P04 | ===================================
+2026-09-08 09:59:21 | INFO | P04 | START main()
+2026-09-08 09:59:21 | INFO | P04 | ===================================
+2026-09-08 09:59:21 | INFO | P04 | -------------------------------
+2026-09-08 09:59:21 | INFO | P04 | 01. LOAD the data.
+2026-09-08 09:59:21 | INFO | P04 | -------------------------------
+2026-09-08 09:59:21 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 09:59:21 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 09:59:21 | INFO | P04 | -------------------------------
+2026-09-08 09:59:21 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 09:59:21 | INFO | P04 | -------------------------------
+2026-09-08 09:59:21 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 09:59:21 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 09:59:21 | INFO | P04 | -------------------------------
+2026-09-08 09:59:21 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 09:59:21 | INFO | P04 | -------------------------------
+2026-09-08 09:59:21 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 09:59:21 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 09:59:21 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 09:59:21 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 09:59:21 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 09:59:21 | INFO | P04 | Duplicate rows: 0
+2026-09-08 09:59:21 | INFO | P04 | -------------------------------
+2026-09-08 09:59:21 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 09:59:21 | INFO | P04 | -------------------------------
+2026-09-08 09:59:21 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 09:59:21 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 09:59:21 | INFO | P04 | -------------------------------
+2026-09-08 09:59:21 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 09:59:21 | INFO | P04 | -------------------------------
+2026-09-08 09:59:22 | INFO | P04 | -------------------------------
+2026-09-08 09:59:22 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 09:59:22 | INFO | P04 | -------------------------------
+2026-09-08 09:59:22 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 09:59:22 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 09:59:22 | INFO | P04 | -------------------------------
+2026-09-08 09:59:22 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 09:59:22 | INFO | P04 | -------------------------------
+2026-09-08 09:59:22 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 09:59:22 | INFO | P04 | -------------------------------
+2026-09-08 09:59:22 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 09:59:22 | INFO | P04 | -------------------------------
+2026-09-08 09:59:22 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 09:59:22 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 09:59:38 | INFO | P04 | ===================================
+2026-09-08 09:59:38 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 09:59:38 | INFO | P04 | ===================================
+2026-09-08 14:09:31 | INFO | P04 | === RUN START ===
+2026-09-08 14:09:31 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 14:09:31 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 14:09:31 | INFO | P04 | python=3.14.7
+2026-09-08 14:09:31 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 14:09:31 | INFO | P04 | shell=zsh
+2026-09-08 14:09:31 | INFO | P04 | cwd=.
+2026-09-08 14:09:31 | INFO | P04 | github_actions=False
+2026-09-08 14:09:31 | INFO | P04 | ===================================
+2026-09-08 14:09:31 | INFO | P04 | START main()
+2026-09-08 14:09:31 | INFO | P04 | ===================================
+2026-09-08 14:09:31 | INFO | P04 | -------------------------------
+2026-09-08 14:09:31 | INFO | P04 | 01. LOAD the data.
+2026-09-08 14:09:31 | INFO | P04 | -------------------------------
+2026-09-08 14:09:31 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 14:09:31 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 14:09:31 | INFO | P04 | -------------------------------
+2026-09-08 14:09:31 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 14:09:31 | INFO | P04 | -------------------------------
+2026-09-08 14:09:31 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:09:31 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:09:31 | INFO | P04 | -------------------------------
+2026-09-08 14:09:31 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 14:09:31 | INFO | P04 | -------------------------------
+2026-09-08 14:09:31 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:09:31 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:09:31 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:09:31 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:09:31 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 14:09:31 | INFO | P04 | Duplicate rows: 0
+2026-09-08 14:09:31 | INFO | P04 | -------------------------------
+2026-09-08 14:09:31 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 14:09:31 | INFO | P04 | -------------------------------
+2026-09-08 14:09:31 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:09:31 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:09:31 | INFO | P04 | -------------------------------
+2026-09-08 14:09:31 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 14:09:31 | INFO | P04 | -------------------------------
+2026-09-08 14:09:32 | INFO | P04 | -------------------------------
+2026-09-08 14:09:32 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 14:09:32 | INFO | P04 | -------------------------------
+2026-09-08 14:09:32 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:09:32 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:09:32 | INFO | P04 | -------------------------------
+2026-09-08 14:09:32 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 14:09:32 | INFO | P04 | -------------------------------
+2026-09-08 14:09:32 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 14:09:32 | INFO | P04 | -------------------------------
+2026-09-08 14:09:32 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 14:09:32 | INFO | P04 | -------------------------------
+2026-09-08 14:09:32 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 14:09:32 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 14:09:37 | INFO | P04 | ===================================
+2026-09-08 14:09:37 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 14:09:37 | INFO | P04 | ===================================
+2026-09-08 14:28:12 | INFO | P04 | === RUN START ===
+2026-09-08 14:28:12 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 14:28:12 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 14:28:12 | INFO | P04 | python=3.14.7
+2026-09-08 14:28:12 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 14:28:12 | INFO | P04 | shell=zsh
+2026-09-08 14:28:12 | INFO | P04 | cwd=.
+2026-09-08 14:28:12 | INFO | P04 | github_actions=False
+2026-09-08 14:28:12 | INFO | P04 | ===================================
+2026-09-08 14:28:12 | INFO | P04 | START main()
+2026-09-08 14:28:12 | INFO | P04 | ===================================
+2026-09-08 14:28:12 | INFO | P04 | -------------------------------
+2026-09-08 14:28:12 | INFO | P04 | 01. LOAD the data.
+2026-09-08 14:28:12 | INFO | P04 | -------------------------------
+2026-09-08 14:28:12 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 14:28:12 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 14:28:12 | INFO | P04 | -------------------------------
+2026-09-08 14:28:12 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 14:28:12 | INFO | P04 | -------------------------------
+2026-09-08 14:28:12 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:28:12 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:28:12 | INFO | P04 | -------------------------------
+2026-09-08 14:28:12 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 14:28:12 | INFO | P04 | -------------------------------
+2026-09-08 14:28:12 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:28:12 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:28:12 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:28:12 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:28:12 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 14:28:12 | INFO | P04 | Duplicate rows: 0
+2026-09-08 14:28:13 | INFO | P04 | -------------------------------
+2026-09-08 14:28:13 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 14:28:13 | INFO | P04 | -------------------------------
+2026-09-08 14:28:13 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:28:13 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:28:13 | INFO | P04 | -------------------------------
+2026-09-08 14:28:13 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 14:28:13 | INFO | P04 | -------------------------------
+2026-09-08 14:28:13 | INFO | P04 | -------------------------------
+2026-09-08 14:28:13 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 14:28:13 | INFO | P04 | -------------------------------
+2026-09-08 14:28:13 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:28:13 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:28:14 | INFO | P04 | -------------------------------
+2026-09-08 14:28:14 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 14:28:14 | INFO | P04 | -------------------------------
+2026-09-08 14:28:14 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 14:28:14 | INFO | P04 | -------------------------------
+2026-09-08 14:28:14 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 14:28:14 | INFO | P04 | -------------------------------
+2026-09-08 14:28:14 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 14:28:14 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 14:28:18 | INFO | P04 | ===================================
+2026-09-08 14:28:18 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 14:28:18 | INFO | P04 | ===================================
+2026-09-08 14:39:54 | INFO | P04 | === RUN START ===
+2026-09-08 14:39:54 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 14:39:54 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 14:39:54 | INFO | P04 | python=3.14.7
+2026-09-08 14:39:54 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 14:39:54 | INFO | P04 | shell=zsh
+2026-09-08 14:39:54 | INFO | P04 | cwd=.
+2026-09-08 14:39:54 | INFO | P04 | github_actions=False
+2026-09-08 14:39:54 | INFO | P04 | ===================================
+2026-09-08 14:39:54 | INFO | P04 | START main()
+2026-09-08 14:39:54 | INFO | P04 | ===================================
+2026-09-08 14:39:54 | INFO | P04 | -------------------------------
+2026-09-08 14:39:54 | INFO | P04 | 01. LOAD the data.
+2026-09-08 14:39:54 | INFO | P04 | -------------------------------
+2026-09-08 14:39:54 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 14:39:54 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 14:39:54 | INFO | P04 | -------------------------------
+2026-09-08 14:39:54 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 14:39:54 | INFO | P04 | -------------------------------
+2026-09-08 14:39:54 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:39:54 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:39:54 | INFO | P04 | -------------------------------
+2026-09-08 14:39:54 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 14:39:54 | INFO | P04 | -------------------------------
+2026-09-08 14:39:54 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:39:54 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:39:54 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:39:54 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:39:54 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 14:39:54 | INFO | P04 | Duplicate rows: 0
+2026-09-08 14:39:55 | INFO | P04 | -------------------------------
+2026-09-08 14:39:55 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 14:39:55 | INFO | P04 | -------------------------------
+2026-09-08 14:39:55 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:39:55 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:39:55 | INFO | P04 | -------------------------------
+2026-09-08 14:39:55 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 14:39:55 | INFO | P04 | -------------------------------
+2026-09-08 14:39:55 | INFO | P04 | -------------------------------
+2026-09-08 14:39:55 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 14:39:55 | INFO | P04 | -------------------------------
+2026-09-08 14:39:55 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:39:55 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:39:55 | INFO | P04 | -------------------------------
+2026-09-08 14:39:55 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 14:39:55 | INFO | P04 | -------------------------------
+2026-09-08 14:39:55 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 14:39:55 | INFO | P04 | -------------------------------
+2026-09-08 14:39:55 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 14:39:55 | INFO | P04 | -------------------------------
+2026-09-08 14:39:55 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 14:39:55 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 14:39:59 | INFO | P04 | ===================================
+2026-09-08 14:39:59 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 14:39:59 | INFO | P04 | ===================================
+2026-09-08 14:42:24 | INFO | P04 | === RUN START ===
+2026-09-08 14:42:24 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 14:42:24 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 14:42:24 | INFO | P04 | python=3.14.7
+2026-09-08 14:42:24 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 14:42:24 | INFO | P04 | shell=zsh
+2026-09-08 14:42:24 | INFO | P04 | cwd=.
+2026-09-08 14:42:24 | INFO | P04 | github_actions=False
+2026-09-08 14:42:24 | INFO | P04 | ===================================
+2026-09-08 14:42:24 | INFO | P04 | START main()
+2026-09-08 14:42:24 | INFO | P04 | ===================================
+2026-09-08 14:42:24 | INFO | P04 | -------------------------------
+2026-09-08 14:42:24 | INFO | P04 | 01. LOAD the data.
+2026-09-08 14:42:24 | INFO | P04 | -------------------------------
+2026-09-08 14:42:24 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 14:42:24 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 14:42:24 | INFO | P04 | -------------------------------
+2026-09-08 14:42:24 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 14:42:24 | INFO | P04 | -------------------------------
+2026-09-08 14:42:24 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:42:24 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:42:24 | INFO | P04 | -------------------------------
+2026-09-08 14:42:24 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 14:42:24 | INFO | P04 | -------------------------------
+2026-09-08 14:42:24 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:42:24 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:42:24 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:42:24 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:42:24 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 14:42:24 | INFO | P04 | Duplicate rows: 0
+2026-09-08 14:42:24 | INFO | P04 | -------------------------------
+2026-09-08 14:42:24 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 14:42:24 | INFO | P04 | -------------------------------
+2026-09-08 14:42:24 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:42:24 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:42:24 | INFO | P04 | -------------------------------
+2026-09-08 14:42:24 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 14:42:24 | INFO | P04 | -------------------------------
+2026-09-08 14:42:25 | INFO | P04 | -------------------------------
+2026-09-08 14:42:25 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 14:42:25 | INFO | P04 | -------------------------------
+2026-09-08 14:42:25 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:42:25 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:42:25 | INFO | P04 | -------------------------------
+2026-09-08 14:42:25 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 14:42:25 | INFO | P04 | -------------------------------
+2026-09-08 14:42:25 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 14:42:25 | INFO | P04 | -------------------------------
+2026-09-08 14:42:25 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 14:42:25 | INFO | P04 | -------------------------------
+2026-09-08 14:42:25 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 14:42:25 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 14:42:29 | INFO | P04 | ===================================
+2026-09-08 14:42:29 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 14:42:29 | INFO | P04 | ===================================
+2026-09-08 14:48:27 | INFO | P04 | === RUN START ===
+2026-09-08 14:48:27 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 14:48:27 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 14:48:27 | INFO | P04 | python=3.14.7
+2026-09-08 14:48:27 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 14:48:27 | INFO | P04 | shell=zsh
+2026-09-08 14:48:27 | INFO | P04 | cwd=.
+2026-09-08 14:48:27 | INFO | P04 | github_actions=False
+2026-09-08 14:48:27 | INFO | P04 | ===================================
+2026-09-08 14:48:27 | INFO | P04 | START main()
+2026-09-08 14:48:27 | INFO | P04 | ===================================
+2026-09-08 14:48:27 | INFO | P04 | -------------------------------
+2026-09-08 14:48:27 | INFO | P04 | 01. LOAD the data.
+2026-09-08 14:48:27 | INFO | P04 | -------------------------------
+2026-09-08 14:48:27 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 14:48:27 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 14:48:27 | INFO | P04 | -------------------------------
+2026-09-08 14:48:27 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 14:48:27 | INFO | P04 | -------------------------------
+2026-09-08 14:48:27 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:48:27 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:48:27 | INFO | P04 | -------------------------------
+2026-09-08 14:48:27 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 14:48:27 | INFO | P04 | -------------------------------
+2026-09-08 14:48:27 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:48:27 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:48:27 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:48:27 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:48:27 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 14:48:27 | INFO | P04 | Duplicate rows: 0
+2026-09-08 14:48:27 | INFO | P04 | -------------------------------
+2026-09-08 14:48:27 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 14:48:27 | INFO | P04 | -------------------------------
+2026-09-08 14:48:27 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:48:27 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:48:27 | INFO | P04 | -------------------------------
+2026-09-08 14:48:27 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 14:48:27 | INFO | P04 | -------------------------------
+2026-09-08 14:48:28 | INFO | P04 | -------------------------------
+2026-09-08 14:48:28 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 14:48:28 | INFO | P04 | -------------------------------
+2026-09-08 14:48:28 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:48:28 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:48:28 | INFO | P04 | -------------------------------
+2026-09-08 14:48:28 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 14:48:28 | INFO | P04 | -------------------------------
+2026-09-08 14:48:28 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 14:48:28 | INFO | P04 | -------------------------------
+2026-09-08 14:48:28 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 14:48:28 | INFO | P04 | -------------------------------
+2026-09-08 14:48:28 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 14:48:28 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 14:48:32 | INFO | P04 | ===================================
+2026-09-08 14:48:32 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 14:48:32 | INFO | P04 | ===================================
+2026-09-08 14:49:47 | INFO | P04 | === RUN START ===
+2026-09-08 14:49:47 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 14:49:47 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 14:49:47 | INFO | P04 | python=3.14.7
+2026-09-08 14:49:47 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 14:49:47 | INFO | P04 | shell=zsh
+2026-09-08 14:49:47 | INFO | P04 | cwd=.
+2026-09-08 14:49:47 | INFO | P04 | github_actions=False
+2026-09-08 14:49:47 | INFO | P04 | ===================================
+2026-09-08 14:49:47 | INFO | P04 | START main()
+2026-09-08 14:49:47 | INFO | P04 | ===================================
+2026-09-08 14:49:47 | INFO | P04 | -------------------------------
+2026-09-08 14:49:47 | INFO | P04 | 01. LOAD the data.
+2026-09-08 14:49:47 | INFO | P04 | -------------------------------
+2026-09-08 14:49:47 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 14:49:47 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 14:49:47 | INFO | P04 | -------------------------------
+2026-09-08 14:49:47 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 14:49:47 | INFO | P04 | -------------------------------
+2026-09-08 14:49:47 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:49:47 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:49:47 | INFO | P04 | -------------------------------
+2026-09-08 14:49:47 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 14:49:47 | INFO | P04 | -------------------------------
+2026-09-08 14:49:47 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:49:47 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:49:47 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:49:47 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:49:47 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 14:49:47 | INFO | P04 | Duplicate rows: 0
+2026-09-08 14:49:47 | INFO | P04 | -------------------------------
+2026-09-08 14:49:47 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 14:49:47 | INFO | P04 | -------------------------------
+2026-09-08 14:49:47 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:49:47 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:49:47 | INFO | P04 | -------------------------------
+2026-09-08 14:49:47 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 14:49:47 | INFO | P04 | -------------------------------
+2026-09-08 14:49:48 | INFO | P04 | -------------------------------
+2026-09-08 14:49:48 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 14:49:48 | INFO | P04 | -------------------------------
+2026-09-08 14:49:48 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:49:48 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:49:48 | INFO | P04 | -------------------------------
+2026-09-08 14:49:48 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 14:49:48 | INFO | P04 | -------------------------------
+2026-09-08 14:49:48 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 14:49:48 | INFO | P04 | -------------------------------
+2026-09-08 14:49:48 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 14:49:48 | INFO | P04 | -------------------------------
+2026-09-08 14:49:48 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 14:49:48 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 14:49:52 | INFO | P04 | ===================================
+2026-09-08 14:49:52 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 14:49:52 | INFO | P04 | ===================================
+2026-09-08 14:51:05 | INFO | P04 | === RUN START ===
+2026-09-08 14:51:05 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 14:51:05 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 14:51:05 | INFO | P04 | python=3.14.7
+2026-09-08 14:51:05 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 14:51:05 | INFO | P04 | shell=zsh
+2026-09-08 14:51:05 | INFO | P04 | cwd=.
+2026-09-08 14:51:05 | INFO | P04 | github_actions=False
+2026-09-08 14:51:05 | INFO | P04 | ===================================
+2026-09-08 14:51:05 | INFO | P04 | START main()
+2026-09-08 14:51:05 | INFO | P04 | ===================================
+2026-09-08 14:51:05 | INFO | P04 | -------------------------------
+2026-09-08 14:51:05 | INFO | P04 | 01. LOAD the data.
+2026-09-08 14:51:05 | INFO | P04 | -------------------------------
+2026-09-08 14:51:05 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 14:51:05 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 14:51:05 | INFO | P04 | -------------------------------
+2026-09-08 14:51:05 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 14:51:05 | INFO | P04 | -------------------------------
+2026-09-08 14:51:05 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:51:05 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:51:05 | INFO | P04 | -------------------------------
+2026-09-08 14:51:05 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 14:51:05 | INFO | P04 | -------------------------------
+2026-09-08 14:51:05 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:51:05 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:51:05 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:51:05 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:51:05 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 14:51:05 | INFO | P04 | Duplicate rows: 0
+2026-09-08 14:51:06 | INFO | P04 | -------------------------------
+2026-09-08 14:51:06 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 14:51:06 | INFO | P04 | -------------------------------
+2026-09-08 14:51:06 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:51:06 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:51:06 | INFO | P04 | -------------------------------
+2026-09-08 14:51:06 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 14:51:06 | INFO | P04 | -------------------------------
+2026-09-08 14:51:06 | INFO | P04 | -------------------------------
+2026-09-08 14:51:06 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 14:51:06 | INFO | P04 | -------------------------------
+2026-09-08 14:51:06 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:51:06 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:51:06 | INFO | P04 | -------------------------------
+2026-09-08 14:51:06 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 14:51:06 | INFO | P04 | -------------------------------
+2026-09-08 14:51:06 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 14:51:06 | INFO | P04 | -------------------------------
+2026-09-08 14:51:06 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 14:51:06 | INFO | P04 | -------------------------------
+2026-09-08 14:51:06 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 14:51:06 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 14:51:10 | INFO | P04 | ===================================
+2026-09-08 14:51:10 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 14:51:10 | INFO | P04 | ===================================
+2026-09-08 14:56:21 | INFO | P04 | === RUN START ===
+2026-09-08 14:56:21 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 14:56:21 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 14:56:21 | INFO | P04 | python=3.14.7
+2026-09-08 14:56:21 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 14:56:21 | INFO | P04 | shell=zsh
+2026-09-08 14:56:21 | INFO | P04 | cwd=.
+2026-09-08 14:56:21 | INFO | P04 | github_actions=False
+2026-09-08 14:56:21 | INFO | P04 | ===================================
+2026-09-08 14:56:21 | INFO | P04 | START main()
+2026-09-08 14:56:21 | INFO | P04 | ===================================
+2026-09-08 14:56:21 | INFO | P04 | -------------------------------
+2026-09-08 14:56:21 | INFO | P04 | 01. LOAD the data.
+2026-09-08 14:56:21 | INFO | P04 | -------------------------------
+2026-09-08 14:56:21 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 14:56:21 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 14:56:21 | INFO | P04 | -------------------------------
+2026-09-08 14:56:21 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 14:56:21 | INFO | P04 | -------------------------------
+2026-09-08 14:56:21 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:56:21 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:56:21 | INFO | P04 | -------------------------------
+2026-09-08 14:56:21 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 14:56:21 | INFO | P04 | -------------------------------
+2026-09-08 14:56:21 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:56:21 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:56:21 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:56:21 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:56:21 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 14:56:21 | INFO | P04 | Duplicate rows: 0
+2026-09-08 14:56:21 | INFO | P04 | -------------------------------
+2026-09-08 14:56:21 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 14:56:21 | INFO | P04 | -------------------------------
+2026-09-08 14:56:21 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:56:21 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:56:21 | INFO | P04 | -------------------------------
+2026-09-08 14:56:21 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 14:56:21 | INFO | P04 | -------------------------------
+2026-09-08 14:56:22 | INFO | P04 | -------------------------------
+2026-09-08 14:56:22 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 14:56:22 | INFO | P04 | -------------------------------
+2026-09-08 14:56:22 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:56:22 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:56:22 | INFO | P04 | -------------------------------
+2026-09-08 14:56:22 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 14:56:22 | INFO | P04 | -------------------------------
+2026-09-08 14:56:22 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 14:56:22 | INFO | P04 | -------------------------------
+2026-09-08 14:56:22 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 14:56:22 | INFO | P04 | -------------------------------
+2026-09-08 14:56:22 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 14:56:22 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 14:56:27 | INFO | P04 | ===================================
+2026-09-08 14:56:27 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 14:56:27 | INFO | P04 | ===================================
+2026-09-08 14:57:25 | INFO | P04 | === RUN START ===
+2026-09-08 14:57:25 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 14:57:25 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 14:57:25 | INFO | P04 | python=3.14.7
+2026-09-08 14:57:25 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 14:57:25 | INFO | P04 | shell=zsh
+2026-09-08 14:57:25 | INFO | P04 | cwd=.
+2026-09-08 14:57:25 | INFO | P04 | github_actions=False
+2026-09-08 14:57:25 | INFO | P04 | ===================================
+2026-09-08 14:57:25 | INFO | P04 | START main()
+2026-09-08 14:57:25 | INFO | P04 | ===================================
+2026-09-08 14:57:25 | INFO | P04 | -------------------------------
+2026-09-08 14:57:25 | INFO | P04 | 01. LOAD the data.
+2026-09-08 14:57:25 | INFO | P04 | -------------------------------
+2026-09-08 14:57:25 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 14:57:25 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 14:57:25 | INFO | P04 | -------------------------------
+2026-09-08 14:57:25 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 14:57:25 | INFO | P04 | -------------------------------
+2026-09-08 14:57:25 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:57:25 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 14:57:25 | INFO | P04 | -------------------------------
+2026-09-08 14:57:25 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 14:57:25 | INFO | P04 | -------------------------------
+2026-09-08 14:57:25 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:57:25 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 14:57:25 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:57:25 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 14:57:25 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 14:57:25 | INFO | P04 | Duplicate rows: 0
+2026-09-08 14:57:25 | INFO | P04 | -------------------------------
+2026-09-08 14:57:25 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 14:57:25 | INFO | P04 | -------------------------------
+2026-09-08 14:57:25 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:57:25 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 14:57:25 | INFO | P04 | -------------------------------
+2026-09-08 14:57:25 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 14:57:25 | INFO | P04 | -------------------------------
+2026-09-08 14:57:26 | INFO | P04 | -------------------------------
+2026-09-08 14:57:26 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 14:57:26 | INFO | P04 | -------------------------------
+2026-09-08 14:57:26 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:57:26 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 14:57:26 | INFO | P04 | -------------------------------
+2026-09-08 14:57:26 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 14:57:26 | INFO | P04 | -------------------------------
+2026-09-08 14:57:26 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 14:57:26 | INFO | P04 | -------------------------------
+2026-09-08 14:57:26 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 14:57:26 | INFO | P04 | -------------------------------
+2026-09-08 14:57:26 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 14:57:26 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 14:57:26 | INFO | P04 | ===================================
+2026-09-08 14:57:26 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 14:57:26 | INFO | P04 | ===================================
+2026-09-08 15:03:09 | INFO | P04 | === RUN START ===
+2026-09-08 15:03:09 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 15:03:09 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 15:03:09 | INFO | P04 | python=3.14.7
+2026-09-08 15:03:09 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 15:03:09 | INFO | P04 | shell=zsh
+2026-09-08 15:03:09 | INFO | P04 | cwd=.
+2026-09-08 15:03:09 | INFO | P04 | github_actions=False
+2026-09-08 15:03:09 | INFO | P04 | ===================================
+2026-09-08 15:03:09 | INFO | P04 | START main()
+2026-09-08 15:03:09 | INFO | P04 | ===================================
+2026-09-08 15:03:09 | INFO | P04 | -------------------------------
+2026-09-08 15:03:09 | INFO | P04 | 01. LOAD the data.
+2026-09-08 15:03:09 | INFO | P04 | -------------------------------
+2026-09-08 15:03:09 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 15:03:09 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 15:03:09 | INFO | P04 | -------------------------------
+2026-09-08 15:03:09 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 15:03:09 | INFO | P04 | -------------------------------
+2026-09-08 15:03:09 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:03:09 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:03:09 | INFO | P04 | -------------------------------
+2026-09-08 15:03:09 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 15:03:09 | INFO | P04 | -------------------------------
+2026-09-08 15:03:09 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:03:09 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:03:09 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:03:09 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:03:09 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 15:03:09 | INFO | P04 | Duplicate rows: 0
+2026-09-08 15:03:09 | INFO | P04 | -------------------------------
+2026-09-08 15:03:09 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 15:03:09 | INFO | P04 | -------------------------------
+2026-09-08 15:03:09 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:03:09 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:03:09 | INFO | P04 | -------------------------------
+2026-09-08 15:03:09 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 15:03:09 | INFO | P04 | -------------------------------
+2026-09-08 15:03:10 | INFO | P04 | -------------------------------
+2026-09-08 15:03:10 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 15:03:10 | INFO | P04 | -------------------------------
+2026-09-08 15:03:10 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:03:10 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:03:10 | INFO | P04 | -------------------------------
+2026-09-08 15:03:10 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 15:03:10 | INFO | P04 | -------------------------------
+2026-09-08 15:03:10 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 15:03:10 | INFO | P04 | -------------------------------
+2026-09-08 15:03:10 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 15:03:10 | INFO | P04 | -------------------------------
+2026-09-08 15:03:10 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 15:03:10 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 15:03:10 | INFO | P04 | ===================================
+2026-09-08 15:03:10 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 15:03:10 | INFO | P04 | ===================================
+2026-09-08 15:07:06 | INFO | P04 | === RUN START ===
+2026-09-08 15:07:06 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 15:07:06 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 15:07:06 | INFO | P04 | python=3.14.7
+2026-09-08 15:07:06 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 15:07:06 | INFO | P04 | shell=zsh
+2026-09-08 15:07:06 | INFO | P04 | cwd=.
+2026-09-08 15:07:06 | INFO | P04 | github_actions=False
+2026-09-08 15:07:06 | INFO | P04 | ===================================
+2026-09-08 15:07:06 | INFO | P04 | START main()
+2026-09-08 15:07:06 | INFO | P04 | ===================================
+2026-09-08 15:07:06 | INFO | P04 | -------------------------------
+2026-09-08 15:07:06 | INFO | P04 | 01. LOAD the data.
+2026-09-08 15:07:06 | INFO | P04 | -------------------------------
+2026-09-08 15:07:06 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 15:07:06 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 15:07:06 | INFO | P04 | -------------------------------
+2026-09-08 15:07:06 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 15:07:06 | INFO | P04 | -------------------------------
+2026-09-08 15:07:06 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:07:06 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:07:06 | INFO | P04 | -------------------------------
+2026-09-08 15:07:06 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 15:07:06 | INFO | P04 | -------------------------------
+2026-09-08 15:07:06 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:07:06 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:07:06 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:07:06 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:07:06 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 15:07:06 | INFO | P04 | Duplicate rows: 0
+2026-09-08 15:07:06 | INFO | P04 | -------------------------------
+2026-09-08 15:07:06 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 15:07:06 | INFO | P04 | -------------------------------
+2026-09-08 15:07:06 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:07:06 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:07:06 | INFO | P04 | -------------------------------
+2026-09-08 15:07:06 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 15:07:06 | INFO | P04 | -------------------------------
+2026-09-08 15:07:07 | INFO | P04 | -------------------------------
+2026-09-08 15:07:07 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 15:07:07 | INFO | P04 | -------------------------------
+2026-09-08 15:07:07 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:07:07 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:07:07 | INFO | P04 | -------------------------------
+2026-09-08 15:07:07 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 15:07:07 | INFO | P04 | -------------------------------
+2026-09-08 15:07:07 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 15:07:07 | INFO | P04 | -------------------------------
+2026-09-08 15:07:07 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 15:07:07 | INFO | P04 | -------------------------------
+2026-09-08 15:07:07 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 15:07:07 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 15:07:07 | INFO | P04 | ===================================
+2026-09-08 15:07:07 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 15:07:07 | INFO | P04 | ===================================
+2026-09-08 15:08:28 | INFO | P04 | === RUN START ===
+2026-09-08 15:08:28 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 15:08:28 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 15:08:28 | INFO | P04 | python=3.14.7
+2026-09-08 15:08:28 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 15:08:28 | INFO | P04 | shell=zsh
+2026-09-08 15:08:28 | INFO | P04 | cwd=.
+2026-09-08 15:08:28 | INFO | P04 | github_actions=False
+2026-09-08 15:08:28 | INFO | P04 | ===================================
+2026-09-08 15:08:28 | INFO | P04 | START main()
+2026-09-08 15:08:28 | INFO | P04 | ===================================
+2026-09-08 15:08:28 | INFO | P04 | -------------------------------
+2026-09-08 15:08:28 | INFO | P04 | 01. LOAD the data.
+2026-09-08 15:08:28 | INFO | P04 | -------------------------------
+2026-09-08 15:08:28 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 15:08:28 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 15:08:28 | INFO | P04 | -------------------------------
+2026-09-08 15:08:28 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 15:08:28 | INFO | P04 | -------------------------------
+2026-09-08 15:08:28 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:08:28 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:08:28 | INFO | P04 | -------------------------------
+2026-09-08 15:08:28 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 15:08:28 | INFO | P04 | -------------------------------
+2026-09-08 15:08:28 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:08:28 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:08:28 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:08:28 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:08:28 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 15:08:28 | INFO | P04 | Duplicate rows: 0
+2026-09-08 15:08:29 | INFO | P04 | -------------------------------
+2026-09-08 15:08:29 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 15:08:29 | INFO | P04 | -------------------------------
+2026-09-08 15:08:29 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:08:29 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:08:29 | INFO | P04 | -------------------------------
+2026-09-08 15:08:29 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 15:08:29 | INFO | P04 | -------------------------------
+2026-09-08 15:08:29 | INFO | P04 | -------------------------------
+2026-09-08 15:08:29 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 15:08:29 | INFO | P04 | -------------------------------
+2026-09-08 15:08:29 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:08:29 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:08:29 | INFO | P04 | -------------------------------
+2026-09-08 15:08:29 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 15:08:29 | INFO | P04 | -------------------------------
+2026-09-08 15:08:29 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 15:08:29 | INFO | P04 | -------------------------------
+2026-09-08 15:08:29 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 15:08:29 | INFO | P04 | -------------------------------
+2026-09-08 15:08:29 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 15:08:29 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 15:08:29 | INFO | P04 | ===================================
+2026-09-08 15:08:29 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 15:08:29 | INFO | P04 | ===================================
+2026-09-08 15:09:24 | INFO | P04 | === RUN START ===
+2026-09-08 15:09:24 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 15:09:24 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 15:09:24 | INFO | P04 | python=3.14.7
+2026-09-08 15:09:24 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 15:09:24 | INFO | P04 | shell=zsh
+2026-09-08 15:09:24 | INFO | P04 | cwd=.
+2026-09-08 15:09:24 | INFO | P04 | github_actions=False
+2026-09-08 15:09:24 | INFO | P04 | ===================================
+2026-09-08 15:09:24 | INFO | P04 | START main()
+2026-09-08 15:09:24 | INFO | P04 | ===================================
+2026-09-08 15:09:24 | INFO | P04 | -------------------------------
+2026-09-08 15:09:24 | INFO | P04 | 01. LOAD the data.
+2026-09-08 15:09:24 | INFO | P04 | -------------------------------
+2026-09-08 15:09:24 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 15:09:24 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 15:09:24 | INFO | P04 | -------------------------------
+2026-09-08 15:09:24 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 15:09:24 | INFO | P04 | -------------------------------
+2026-09-08 15:09:24 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:09:24 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:09:24 | INFO | P04 | -------------------------------
+2026-09-08 15:09:24 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 15:09:24 | INFO | P04 | -------------------------------
+2026-09-08 15:09:24 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:09:24 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:09:24 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:09:24 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:09:24 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 15:09:24 | INFO | P04 | Duplicate rows: 0
+2026-09-08 15:09:24 | INFO | P04 | -------------------------------
+2026-09-08 15:09:24 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 15:09:24 | INFO | P04 | -------------------------------
+2026-09-08 15:09:24 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:09:24 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:09:24 | INFO | P04 | -------------------------------
+2026-09-08 15:09:24 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 15:09:24 | INFO | P04 | -------------------------------
+2026-09-08 15:09:25 | INFO | P04 | -------------------------------
+2026-09-08 15:09:25 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 15:09:25 | INFO | P04 | -------------------------------
+2026-09-08 15:09:25 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:09:25 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:09:25 | INFO | P04 | -------------------------------
+2026-09-08 15:09:25 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 15:09:25 | INFO | P04 | -------------------------------
+2026-09-08 15:09:25 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 15:09:25 | INFO | P04 | -------------------------------
+2026-09-08 15:09:25 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 15:09:25 | INFO | P04 | -------------------------------
+2026-09-08 15:09:25 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 15:09:25 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 15:09:25 | INFO | P04 | ===================================
+2026-09-08 15:09:25 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 15:09:25 | INFO | P04 | ===================================
+2026-09-08 15:10:52 | INFO | P04 | === RUN START ===
+2026-09-08 15:10:52 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 15:10:52 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 15:10:52 | INFO | P04 | python=3.14.7
+2026-09-08 15:10:52 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 15:10:52 | INFO | P04 | shell=zsh
+2026-09-08 15:10:52 | INFO | P04 | cwd=.
+2026-09-08 15:10:52 | INFO | P04 | github_actions=False
+2026-09-08 15:10:52 | INFO | P04 | ===================================
+2026-09-08 15:10:52 | INFO | P04 | START main()
+2026-09-08 15:10:52 | INFO | P04 | ===================================
+2026-09-08 15:10:52 | INFO | P04 | -------------------------------
+2026-09-08 15:10:52 | INFO | P04 | 01. LOAD the data.
+2026-09-08 15:10:52 | INFO | P04 | -------------------------------
+2026-09-08 15:10:52 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 15:10:52 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 15:10:52 | INFO | P04 | -------------------------------
+2026-09-08 15:10:52 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 15:10:52 | INFO | P04 | -------------------------------
+2026-09-08 15:10:52 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:10:52 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:10:52 | INFO | P04 | -------------------------------
+2026-09-08 15:10:52 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 15:10:52 | INFO | P04 | -------------------------------
+2026-09-08 15:10:52 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:10:52 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:10:52 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:10:52 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:10:52 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 15:10:52 | INFO | P04 | Duplicate rows: 0
+2026-09-08 15:10:52 | INFO | P04 | -------------------------------
+2026-09-08 15:10:52 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 15:10:52 | INFO | P04 | -------------------------------
+2026-09-08 15:10:52 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:10:52 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:10:52 | INFO | P04 | -------------------------------
+2026-09-08 15:10:52 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 15:10:52 | INFO | P04 | -------------------------------
+2026-09-08 15:10:53 | INFO | P04 | -------------------------------
+2026-09-08 15:10:53 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 15:10:53 | INFO | P04 | -------------------------------
+2026-09-08 15:10:53 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:10:53 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:10:53 | INFO | P04 | -------------------------------
+2026-09-08 15:10:53 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 15:10:53 | INFO | P04 | -------------------------------
+2026-09-08 15:10:53 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 15:10:53 | INFO | P04 | -------------------------------
+2026-09-08 15:10:53 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 15:10:53 | INFO | P04 | -------------------------------
+2026-09-08 15:10:53 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 15:10:53 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 15:10:53 | INFO | P04 | ===================================
+2026-09-08 15:10:53 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 15:10:53 | INFO | P04 | ===================================
+2026-09-08 15:27:19 | INFO | P04 | === RUN START ===
+2026-09-08 15:27:19 | INFO | P04 | project=P04 - EXPLORATORY DATA ANALYSIS
+2026-09-08 15:27:19 | INFO | P04 | repo_dir=datafun-04-eda
+2026-09-08 15:27:19 | INFO | P04 | python=3.14.7
+2026-09-08 15:27:19 | INFO | P04 | os=Darwin 23.5.0
+2026-09-08 15:27:19 | INFO | P04 | shell=zsh
+2026-09-08 15:27:19 | INFO | P04 | cwd=.
+2026-09-08 15:27:19 | INFO | P04 | github_actions=False
+2026-09-08 15:27:19 | INFO | P04 | ===================================
+2026-09-08 15:27:19 | INFO | P04 | START main()
+2026-09-08 15:27:19 | INFO | P04 | ===================================
+2026-09-08 15:27:19 | INFO | P04 | -------------------------------
+2026-09-08 15:27:19 | INFO | P04 | 01. LOAD the data.
+2026-09-08 15:27:19 | INFO | P04 | -------------------------------
+2026-09-08 15:27:19 | INFO | P04 | Loading Seaborn dataset: penguins
+2026-09-08 15:27:19 | INFO | P04 | Loaded: 344 rows, 7 columns
+2026-09-08 15:27:19 | INFO | P04 | -------------------------------
+2026-09-08 15:27:19 | INFO | P04 | 02. INSPECT the data.
+2026-09-08 15:27:19 | INFO | P04 | -------------------------------
+2026-09-08 15:27:19 | DEBUG | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:27:19 | INFO | P04 | 
+DATA INSPECTION
+
+Grain:
+one observed penguin
+
+Shape:
+344 rows
+7 columns
+
+Columns:
+['species', 'island', 'bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']
+
+2026-09-08 15:27:19 | INFO | P04 | -------------------------------
+2026-09-08 15:27:19 | INFO | P04 | 03. CHECK data quality.
+2026-09-08 15:27:19 | INFO | P04 | -------------------------------
+2026-09-08 15:27:19 | DEBUG | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:27:19 | INFO | P04 | 
+              column    dtype  non_missing_count  missing_count  missing_pct  unique_count
+0            species      str                344              0         0.00             3
+1             island      str                344              0         0.00             3
+2     bill_length_mm  float64                342              2         0.58           164
+3      bill_depth_mm  float64                342              2         0.58            80
+4  flipper_length_mm  float64                342              2         0.58            55
+5        body_mass_g  float64                342              2         0.58            94
+6                sex      str                333             11         3.20             2
+2026-09-08 15:27:19 | DEBUG | P04 | 
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:27:19 | INFO | P04 | 
+Missing values:
+sex                  11
+bill_length_mm        2
+bill_depth_mm         2
+flipper_length_mm     2
+body_mass_g           2
+species               0
+island                0
+dtype: int64
+2026-09-08 15:27:19 | INFO | P04 | Duplicate rows detected: 0
+2026-09-08 15:27:19 | INFO | P04 | Duplicate rows: 0
+2026-09-08 15:27:19 | INFO | P04 | -------------------------------
+2026-09-08 15:27:19 | INFO | P04 | 04. DESCRIBE numeric variables.
+2026-09-08 15:27:19 | INFO | P04 | -------------------------------
+2026-09-08 15:27:19 | DEBUG | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:27:19 | INFO | P04 | 
+                   count         mean         std     min       25%      50%     75%     max
+bill_length_mm     342.0    43.921930    5.459584    32.1    39.225    44.45    48.5    59.6
+bill_depth_mm      342.0    17.151170    1.974793    13.1    15.600    17.30    18.7    21.5
+flipper_length_mm  342.0   200.915205   14.061714   172.0   190.000   197.00   213.0   231.0
+body_mass_g        342.0  4201.754386  801.954536  2700.0  3550.000  4050.00  4750.0  6300.0
+2026-09-08 15:27:19 | INFO | P04 | -------------------------------
+2026-09-08 15:27:19 | INFO | P04 | 05. VISUALIZE distributions.
+2026-09-08 15:27:19 | INFO | P04 | -------------------------------
+2026-09-08 15:27:20 | INFO | P04 | -------------------------------
+2026-09-08 15:27:20 | INFO | P04 | 06. EXPLORE relationships (e.g., between 2 numeric variables).
+2026-09-08 15:27:20 | INFO | P04 | -------------------------------
+2026-09-08 15:27:20 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:27:20 | INFO | P04 | Correlation between flipper_length_mm and body_mass_g: 0.871
+2026-09-08 15:27:20 | INFO | P04 | -------------------------------
+2026-09-08 15:27:20 | INFO | P04 | 07. SUMMARIZE what you found.
+2026-09-08 15:27:20 | INFO | P04 | -------------------------------
+2026-09-08 15:27:20 | INFO | P04 | CUSTOM OBSERVATIONS:
+    The dataset contains penguin measurements.
+    Some observations (rows) are complete, but some are missing values.
+
+    I reviewed the relationship between:
+    Flipper length vs. body mass
+    and it shows a positive relationship.
+
+    Based on this EDA, I would next like to review additional
+    relationships between other numeric variables.
+    Marimo (reactive notebook cells) might be a good choice
+    for additional exploration.
+    
+2026-09-08 15:27:20 | INFO | P04 | -------------------------------
+2026-09-08 15:27:20 | INFO | P04 | 08. DISPLAY the charts.
+2026-09-08 15:27:20 | INFO | P04 | -------------------------------
+2026-09-08 15:27:20 | INFO | P04 | In a script, call plt.show() at the end to display all charts.
+2026-09-08 15:27:20 | INFO | P04 | Close all chart windows (with the close button) to continue.
+2026-09-08 15:27:20 | INFO | P04 | ===================================
+2026-09-08 15:27:20 | INFO | P04 | END main() - Executed successfully!
+2026-09-08 15:27:20 | INFO | P04 | ===================================

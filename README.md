@@ -141,8 +141,6 @@ git add -A
 uv run pre-commit run --all-files
 
 # run the Python module
-uv run python -m datafun.app
-
 # run marimo nb as a reactive app
 # press Ctrl + C in the terminal to exit
 uv run marimo run src/datafun/notebook.py

@@ -211,8 +211,49 @@ def main() -> None:
     # Save the missing values chart to the designated directory.
     save_chart(
         missing_ax,
-        CHART_DIR / "missing-values.png",
-    )
+        CHART_DIR / "missing-values.png",)
+
+    # Filter for missing values
+    missing_values = df[df.isna().any(axis=1)]
+    
+    # Check if any missing values were found
+    if missing_values.empty:
+        print("No missing values found in the dataset!")
+    else:
+        print(missing_values)
+
+    #Print empty row
+    print()
+
+    print("Remaining rows with missing values after rows 3 and 339 removed")
+
+    #Remove row 3 and row 339, and assign the clean data to a new DataFrame
+    df_cleaned = df.drop([3, 339])
+
+    #Check df_cleaned for missing values
+    missing_values = df_cleaned[df_cleaned.isna().any(axis=1)]
+    
+        #Check if any missing values were found
+    if missing_values.empty:
+        print("No missing values found in the dataset!")
+    else:
+        print(missing_values)
+
+    #Print blank line
+    print()
+
+    # 1. Generate descriptive statistics for both DataFrames
+    stats_df = df.describe()
+    stats_df_cleaned = df_cleaned.describe()
+
+    try:
+        # 2. Compare if the summary tables are mathematically equal
+        pd.testing.assert_frame_equal(stats_df, stats_df_cleaned, check_exact=False, atol=1e-5)
+        print("The statistics for each column in df and df_cleaned are exactly equal")
+        print()
+    except AssertionError as e:
+        print("The statistics are NOT equal. Here are the differences:")
+        print(e)
 
     LOG.info("-------------------------------")
     LOG.info("04. DESCRIBE numeric variables.")
@@ -296,6 +337,9 @@ def main() -> None:
         CHART_DIR / "one-relationship.png",
     )
 
+    # Saving a matplotlib/seaborn plot to your repo
+    plt.savefig('one-relationship.png', dpi=300)
+
     LOG.info("-------------------------------")
     LOG.info("07. SUMMARIZE what you found.")
     LOG.info("-------------------------------")
@@ -330,7 +374,7 @@ def main() -> None:
     LOG.info("In a script, call plt.show() at the end to display all charts.")
     LOG.info("Close all chart windows (with the close button) to continue.")
 
-    plt.show()
+    #plt.show()
 
     LOG.info("===================================")
     LOG.info("END main() - Executed successfully!")
@@ -347,3 +391,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

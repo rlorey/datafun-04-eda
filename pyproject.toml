@@ -24,6 +24,8 @@ dependencies = [
     "pandas",     # WHY: Data manipulation and analysis
     "seaborn",    # WHY: Statistical data visualization
     "matplotlib", # WHY: General-purpose plotting library
+    "duckdb>=1.5.5",
+    "sqlglot>=30.18.0",
 ]
 
 [dependency-groups]
