@@ -213,41 +213,45 @@ def main() -> None:
         missing_ax,
         CHART_DIR / "missing-values.png",)
 
-    # Filter for missing values
+    # CUSTOM: Filter for missing values
     missing_values = df[df.isna().any(axis=1)]
     
-    # Check if any missing values were found
+    # CUSTOM: Check if any missing values were found and print rows with missing values or indicate that no missing values were found.
     if missing_values.empty:
         print("No missing values found in the dataset!")
     else:
         print(missing_values)
 
-    #Print empty row
+    #CUSTOM: Print empty row
     print()
 
-    print("Remaining rows with missing values after rows 3 and 339 removed")
-
-    #Remove row 3 and row 339, and assign the clean data to a new DataFrame
+    #CUSTOM: Remove row 3 and row 339, and assign the clean data to a new dataframe.
+    #CUSTOM: Kept rows with only a missing "sex" value to retain valid data in other categories for analysis.
     df_cleaned = df.drop([3, 339])
 
-    #Check df_cleaned for missing values
+    #CUSTOM: Title for table
+    print("Remaining rows with missing values after rows 3 and 339 removed")
+
+    #CUSTOM: Check df_cleaned for missing values.
     missing_values = df_cleaned[df_cleaned.isna().any(axis=1)]
     
-        #Check if any missing values were found
+    #CUSTOM: Check if any missing values were found in df_cleaned and print rows with missing values or indicate that no missing values were found.
     if missing_values.empty:
         print("No missing values found in the dataset!")
     else:
         print(missing_values)
 
-    #Print blank line
+    #CUSTOM: Print blank line.
     print()
 
-    # 1. Generate descriptive statistics for both DataFrames
+    #CUSTOM: Generate descriptive statistics for both dataframes.
     stats_df = df.describe()
     stats_df_cleaned = df_cleaned.describe()
 
+    #CUSTOM: Compare if the summary tables are mathematically equal.
+    #CUSTOM: If the tables are equal, print out statement indicating they are equal.
+    #CUSTOM: If the tables are unequal, print out the differences.
     try:
-        # 2. Compare if the summary tables are mathematically equal
         pd.testing.assert_frame_equal(stats_df, stats_df_cleaned, check_exact=False, atol=1e-5)
         print("The statistics for each column in df and df_cleaned are exactly equal")
         print()

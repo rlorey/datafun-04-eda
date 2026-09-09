@@ -1,0 +1,257 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.24.0",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "bc018eea0de75cb5fba9e6211b753ff5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"dr-case-notebook\">Dr. Case Notebook</h1>\n<h1 id=\"exploratory-data-analysis-eda\">Exploratory Data Analysis (EDA)</h1>\n<ul>\n<li>Author: <a href=\"https://github.com/denisecase/\" rel=\"noopener noreferrer\" target=\"_blank\">Denise Case</a></li>\n<li>Repository: <a href=\"https://github.com/denisecase/datafun-04-eda/\" rel=\"noopener noreferrer\" target=\"_blank\">datafun-04-eda</a></li>\n<li>Purpose: Demonstrate a reliable, repeatable EDA process for a new tabular dataset</li>\n<li>Dataset: Palmer Penguins</li>\n<li>Source: <a href=\"https://allisonhorst.github.io/palmerpenguins/\" rel=\"noopener noreferrer\" target=\"_blank\">palmerpenguins</a></li>\n<li>There is a docs/data-card.md has more information</li>\n<li>Date: 2026-08</li>\n</ul>\n<h2 id=\"goal\">Goal</h2>\n<span class=\"paragraph\">Exploratory Data Analysis helps us understand a new dataset before deeper analysis. This notebook models a relatively standard process for initial EDA:</span>\n<ol>\n<li>LOAD the data</li>\n<li>INSPECT structure and grain</li>\n<li>CHECK data quality</li>\n<li>CLASSIFY VARIABLES (numeric, categorical) for analysis</li>\n<li>VISUALIZE numeric and categorical distributions</li>\n<li>EXPLORE numeric relationships<ul>\n<li>correlation matrix</li>\n<li>heatmap of all possible x vs y relationshiops</li>\n<li>custom selected pair correlation</li>\n<li>custom selected pair scatter plot</li>\n</ul>\n</li>\n<li>SUMMARIZE narrate findings and next questions</li>\n</ol>\n<span class=\"paragraph\">The mechanics of plotting basic charts are delegated to <code>eda-vizkit</code>.\nAnalysts should focus on what the data means and what warrants investigation.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "06e693b28e218f14504fa15636e66191",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"section-1-project-setup-and-imports\">Section 1. Project Setup and Imports</h2>\n<span class=\"paragraph\">All imports and configuration appear once near the top.</span>\n<span class=\"paragraph\"><code>eda-vizkit</code> provides reusable visualization functions that return Matplotlib <code>Axes</code> objects.\nThe analyst works here to choose what to look at and how to interpret the findings.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "c2ff0cebb580a88c80a05dd8753a0158",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "9d61a5771efe5262d8fb83138c9f4543",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"section-2-load-the-data\">Section 2. Load the Data</h2>\n<span class=\"paragraph\">Load a dataset into a DataFrame and confirm.</span>\n<span class=\"paragraph\">This project uses Seaborn's built-in Palmer Penguins dataset.\nOther EDA projects may load data from CSV, JSON, databases, APIs, or other sources.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "9ba04daf72dea292967b8dba8ef493ff",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "d89d981d777000eb96be3b245684f7eb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"section-3-establish-grain-and-inspect-structure\">Section 3. Establish Grain and Inspect Structure</h2>\n<span class=\"paragraph\">Before analyzing individual variables, establish the <strong>grain</strong>.</span>\n<span class=\"paragraph\"><strong>Grain answers: What does one row represent?</strong></span>\n<span class=\"paragraph\">For this dataset:</span>\n<blockquote>\n<span class=\"paragraph\">One row represents one observed penguin.</span>\n</blockquote>\n<span class=\"paragraph\">Determining the dataset structure includes:</span>\n<ul>\n<li>number of observations (data rows)</li>\n<li>number of variables (colums)</li>\n<li>column names</li>\n<li>storage data types</li>\n<li>non-null counts</li>\n</ul>\n<span class=\"paragraph\">Storage data type indicates the type of value stored.\nFor example, a year may be stored as an integer but still function as an ordered study label (category).</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "486dc884ce59f4aaf7e191844337f20a",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "85b5da9fc8c41bf93434ad66238bf382",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"section-4-create-data-dictionary-and-inspect-data-quality\">Section 4. Create Data Dictionary and Inspect Data Quality</h2>\n<span class=\"paragraph\">WHY: A data dictionary helps with understanding the structure and quality of the data.</span>\n<span class=\"paragraph\">WHY: Missing data is normal. We need to find out how much and where.</span>\n<span class=\"paragraph\">Missing data affects:</span>\n<ul>\n<li>Visualizations</li>\n<li>Summary statistics</li>\n<li>Machine learning models</li>\n</ul>\n<span class=\"paragraph\">LOOK FOR:</span>\n<ul>\n<li>missing values</li>\n<li>duplicate rows</li>\n<li>unusual or unexpected values</li>\n</ul>\n<span class=\"paragraph\">The visualization shows evidence.\nIt does <strong>not</strong> decide whether missing data is acceptable or what should be done about it - that's for the analyst to decide.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "d40662c7f7cbd24acf767871eeccf5b4",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "87089b5f33be5102c55ea7ff87e3d8ed",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "2092bce73694921d82db3a028754c0e0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"section-5-classify-variables-for-analysis\">Section 5. Classify Variables for Analysis</h2>\n<span class=\"paragraph\">For this EDA, classify variables by how we intend to analyze them.</span>\n<h3 id=\"continuous-numeric-variables\">Continuous numeric variables</h3>\n<ul>\n<li><code>bill_length_mm</code></li>\n<li><code>bill_depth_mm</code></li>\n<li><code>flipper_length_mm</code></li>\n<li><code>body_mass_g</code></li>\n</ul>\n<h3 id=\"categorical-variables\">Categorical variables</h3>\n<ul>\n<li><code>species</code></li>\n<li><code>island</code></li>\n<li><code>sex</code></li>\n</ul>\n<h3 id=\"ordered-study-variable\">Ordered study variable</h3>\n<ul>\n<li><code>year</code></li>\n</ul>\n<span class=\"paragraph\">The variable classification guides the standard inspection we perform next.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "6f60cd95364a810f85476d11a3c5d0fb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"section-6-review-numeric-distributions\">Section 6. Review Numeric Distributions</h2>\n<span class=\"paragraph\">A numeric distribution should be inspected before using the variable in relationship analysis.</span>\n<span class=\"paragraph\">For each important continuous numeric variable, review:</span>\n<ul>\n<li>count</li>\n<li>missing values</li>\n<li>mean</li>\n<li>standard deviation</li>\n<li>quartiles</li>\n<li>minimum and maximum</li>\n<li>histogram</li>\n</ul>\n<span class=\"paragraph\">The summary statistics are computed directly from the data.\nThe histogram makes the distribution visually inspectable.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "684b937c425ae0a7b7ad9f19e03461c8",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "6538a64849013a2e51d5cc0667cbaf68",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "3e54fa4b5b0ee5d02c8a943411f47b01",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"section-7-review-categorical-distributions\">Section 7. Review Categorical Distributions</h2>\n<span class=\"paragraph\">For each important categorical variable, inspect category frequencies to show:</span>\n<ul>\n<li>dominant categories</li>\n<li>rare categories</li>\n<li>missing values</li>\n<li>unexpected category labels</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "40092cd5bc8215211699577bd5976d64",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "ea5631ac087114f6e478876fafc3c9df",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"section-8-investigate-a-numeric-relationship\">Section 8. Investigate a Numeric Relationship</h2>\n<span class=\"paragraph\">After inspecting variables individually, choose a relationship worth investigating.</span>\n<span class=\"paragraph\">Question:</span>\n<blockquote>\n<span class=\"paragraph\">Do penguins with longer flippers also tend to have greater body mass?</span>\n</blockquote>\n<span class=\"paragraph\">Both variables are continuous numeric, so a scatter plot is appropriate evidence.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "69ea2d0976f5d5437adb37b68bf87777",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "a78155a2073f5f4f3be5b275eb6f0f0a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"finding\">Finding</h3>\n<span class=\"paragraph\">Flipper length and body mass show a strong positive relationship in this dataset.</span>\n<span class=\"paragraph\">The correlation and scatter plot provide evidence for that finding.</span>\n<span class=\"paragraph\">A finding is a human conclusion supported by analytical evidence.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "8c112961bd3243d81de2fedb1f37b7e9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"section-9-compare-a-numeric-variable-across-categories\">Section 9. Compare a Numeric Variable Across Categories</h2>\n<span class=\"paragraph\">Question:</span>\n<blockquote>\n<span class=\"paragraph\">How does flipper length differ across penguin species?</span>\n</blockquote>\n<span class=\"paragraph\">This combines:</span>\n<ul>\n<li>one categorical variable: <code>species</code></li>\n<li>one continuous numeric variable: <code>flipper_length_mm</code></li>\n</ul>\n<span class=\"paragraph\">A grouped distribution view helps compare the species.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "1645ca8dabb7f635e90d2c37eda73343",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ecfG",
+      "code_hash": "225e8957c1e7d7a49b3684e12a4d104e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"finding\">Finding</h3>\n<span class=\"paragraph\">Flipper-length distributions differ across penguin species.</span>\n<span class=\"paragraph\">This suggests that species is relevant when interpreting penguin measurements.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Pvdt",
+      "code_hash": "fdf0677bf91c9848131936e8a1754580",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"section-10-summary-and-next-questions\">Section 10. Summary and Next Questions</h2>\n<span class=\"paragraph\">Instructional notes: A repeatable EDA process offers:</span>\n<ul>\n<li>a clear understanding of the dataset grain</li>\n<li>an inventory of variables</li>\n<li>basic data-quality evidence</li>\n<li>standard distribution evidence</li>\n<li>selected relationship evidence</li>\n<li>findings supported by that evidence</li>\n<li>new questions worth investigating</li>\n</ul>\n<span class=\"paragraph\">At the end, of your notebook, provide:</span>\n<ul>\n<li>brief summary of your findings</li>\n<li>suggested next steps</li>\n</ul>\n<span class=\"paragraph\">WHY: EDA is not a final report.\nThe summary of your data exploration captures you found\nand what you would like to investigate next.</span>\n<span class=\"paragraph\">Your summary will typically be provided in Markdown\nas it is good for narrative.</span>\n<h3 id=\"analyst-provided-custom-findings\">Analyst-Provided Custom Findings</h3>\n<ul>\n<li>The dataset contains missing values in several variables.</li>\n<li>The continuous measurements have different ranges and distributions.</li>\n<li>Flipper length and body mass have a strong positive relationship.</li>\n<li>Flipper-length distributions differ across species.</li>\n</ul>\n<h3 id=\"analyst-provided-custom-suggested-next-steps\">Analyst-Provided Custom Suggested Next Steps</h3>\n<ul>\n<li>Why do the species differ in flipper length?</li>\n<li>Does the relationship between flipper length and body mass differ by species?</li>\n<li>Which missing values matter for a specific future analysis?</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZBYS",
+      "code_hash": "d1d6032cc2ea1626908b3008c816ae85",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"reminder-run-all-before-sending-to-github\">Reminder: Run All before sending to GitHub</h2>\n<span class=\"paragraph\">Before saving the notebook and pushing to GitHub, use <strong>Run All</strong>\nso outputs are generated in the correct order.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
