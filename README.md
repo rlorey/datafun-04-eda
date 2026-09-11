@@ -16,29 +16,57 @@
 
 # Data Exploratory Data Analysis (EDA) Project
 
-## About the Project
-This repository is dedicated to learning and practicing **Exploratory Data Analysis (EDA)**. The goal of this project is to gain hands-on experience with foundational data science skills—including data cleaning, analyzing data distributions, handling missing values, and uncovering meaningful patterns or anomalies through statistical summaries and visual charts.
+This repository is dedicated to learning and practicing Exploratory Data Analysis (EDA). The goal of this project is to gain hands-on experience with foundational data science skills—including data cleaning, analyzing data distributions, handling missing values, and uncovering meaningful patterns or anomalies through statistical summaries and visual charts.
 
 ## Objectives
+
 * Perform thorough data cleaning and preprocessing.
 * Generate descriptive statistics to understand the data's structure.
 * Create data visualizations (e.g., histograms, scatter plots, box plots, and correlation matrices).
 * Document key insights and data stories discovered during exploration.
+* **Build an interactive data application utilizing a customized Nearest Centroid classifier / distance formula mechanism to predict real Palmer Penguin species based on dynamic user physical dimension inputs.**
 
 ## Technologies Used
+
 * **Python**
 * **marimo** for reactive, reproducible notebook development and data apps
 * **Jupyter Notebooks** for standard interactive computing and documentation
 * **Pandas** for data manipulation
-* **NumPy** for numerical operations
-* **Matplotlib** and **Seaborn** for data visualization
+* **NumPy** for numerical operations and normalized Euclidean distance calculations
+* **Matplotlib and Seaborn** for data visualization and distribution tracking
+
+# run the Python module
+uv run python src/datafun/app.py
+
+## How to Run the Interactive Notebook App
+
+This project utilizes `uv` for fast, reproducible dependency management and `marimo` for a reactive, browser-based data dashboard.
+
+### Prerequisites
+
+Ensure you have `uv` installed on your machine. If you don't have it yet, install it via:
+* **macOS/Linux:** `curl -LsSf https://astral.sh | sh`
+* **Windows (PowerShell):** `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh | iex"`
+
+### Running the Application
+
+Navigate to the project root directory in your terminal and execute one of the following commands:
+
+#### 1. Launch in App Mode (Recommended for Viewing)
+To view the final project as a clean, interactive user dashboard without any underlying code blocks exposed:
+```bash
+uv run marimo run notebooks/penguin_sliders.py
+```
+
+#### 2. Launch in Edit Mode (For Development)
+To view or modify the interactive source code cells side-by-side with the rendering panels:
+```bash
+uv run marimo edit notebooks/penguin_sliders.py
+```
 
 ## Project Structure
 * `data/` - Contains the raw and processed datasets.
 * `notebooks/` - Contains both standard Jupyter Notebooks (`.ipynb`) and reactive `marimo` notebooks (`.py`) documenting the EDA process.
-
-# run the Python module
-uv run python -m datafun.app
 
 ## Produced Artifacts
 
@@ -47,7 +75,7 @@ This project produces the same EDA work in several useful forms.
 - [**Reactive EDA App (marimo)**](https://rlorey.github.io/datafun-04-eda/app/)
   - run the analysis interactively in a browser
 
-- [**Reactive EDA Notebook (marimo)**](./src/datafun/notebook.py)
+- [**Reactive EDA Notebook (marimo)**](./src/datafun/penguin_sliders.py)
   - view the Python source used to create the reactive app
 
 - [**Jupyter Notebook**](./notebooks/eda.ipynb)
@@ -65,20 +93,6 @@ This project produces the same EDA work in several useful forms.
 - **src/datafun** - Python code and marimo notebook
 - **notebooks/** - Jupyter notebook analysis
 - **zensical.toml** - update authorship & links
-
-## Common Workflow
-
-Follow the
-[step-by-step workflow guide](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
-carefully.
-
-## Challenges
-
-Challenges are expected.
-Sometimes instructions may not quite match your operating system.
-When issues occur, share screenshots, error messages,
-and details about what you tried.
-Working through issues is part of implementing professional projects.
 
 ## Success
 
