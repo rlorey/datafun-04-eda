@@ -3,6 +3,9 @@ import marimo as mo
 __generated_with = "0.24.0"
 app = mo.App(width="medium")
 
+""" This code runs as a Marimo notebook to input penguin bill length, flipper length
+and body mass. Output is the most likely penguin species of the given penguin. 
+"""
 
 @app.cell
 def _():
