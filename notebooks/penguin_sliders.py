@@ -1,7 +1,7 @@
-import marimo
+import marimo as mo
 
 __generated_with = "0.24.0"
-app = marimo.App(width="medium")
+app = mo.App(width="medium")
 
 
 @app.cell
@@ -12,7 +12,7 @@ def _():
     import seaborn as sns
     import matplotlib.pyplot as plt
 
-    # Load the classic penguins dataset
+    # Load the penguins dataset
     df = sns.load_dataset("penguins").dropna(subset=["bill_length_mm", "flipper_length_mm", "body_mass_g"])
 
     # Create interactive sliders matching the dataset range
@@ -21,40 +21,41 @@ def _():
     mass_slider = mo.ui.slider(start=2500, stop=6500, step=50, value=4200, label="⚖️ Body Mass (g)")
 
     # Arrange sliders inside a neat vertical layout block
-    mo.md(f"""
+    layout = mo.md(f"""
     ### 🐧 Design Your Custom Penguin
     Adjust the physical characteristics below to see which real species your penguin closest resembles!
 
     {mo.vstack([bill_slider, flipper_slider, mass_slider])}
     """)
 
-    return bill_slider, df, flipper_slider, mass_slider, mo, np, plt, sns
+    # Display the layout element on the screen
+    layout
+
+    return bill_slider, df, flipper_slider, layout, mass_slider, mo, np, plt, sns
 
 
 @app.cell
 def _(bill_slider, df, flipper_slider, mass_slider, mo, np):
-    # 1. Grab current slider values
+    # Grab current slider values
     user_features = np.array([bill_slider.value, flipper_slider.value, mass_slider.value])
 
-    # 2. Compute the historical average for each species
+    # Compute the historical average for each species
     species_stats = df.groupby("species")[["bill_length_mm", "flipper_length_mm", "body_mass_g"]].mean()
 
-    # 3. Calculate Euclidean distance to each species average (using normalized values for accuracy)
-    # We divide by the overall standard deviation so body mass grams don't overwhelm millimeter measurements
+    # Calculate Euclidean distance to each species average
     stds = df[["bill_length_mm", "flipper_length_mm", "body_mass_g"]].std().values
 
     distances = {}
     for species, row in species_stats.iterrows():
         species_features = row.values
-        # Normalized Euclidean distance
         dist = np.linalg.norm((user_features - species_features) / stds)
         distances[species] = dist
 
-    # Determine the winner (closest distance)
+    # Determine the winner
     predicted_species = min(distances, key=distances.get)
 
     # Format a clean message
-    mo.md(f"""
+    output = mo.md(f"""
     ### 🔮 Species Prediction: **{predicted_species.upper()}**
 
     **Similarity Breakdown (Lower distance means a closer match):**
@@ -63,7 +64,10 @@ def _(bill_slider, df, flipper_slider, mass_slider, mo, np):
     *   **Gentoo Similarity Score:** {distances['Gentoo']:.2f}
     """)
 
-    return
+    # Display the prediction block on the screen
+    output
+
+    return distances, output, predicted_species
 
 
 @app.cell
@@ -71,7 +75,7 @@ def _(df, flipper_slider, mass_slider, mo, plt, sns):
     # Create a visual context map showing where the user's penguin sits relative to the flock
     fig, ax = plt.subplots(figsize=(7, 4.5))
 
-    # Plot the real data points as a backdrop
+    # Plot the real data points as a backdrop with different colors for each species
     sns.scatterplot(
         data=df, 
         x="flipper_length_mm", 
@@ -100,11 +104,16 @@ def _(df, flipper_slider, mass_slider, mo, plt, sns):
     ax.legend()
     plt.tight_layout()
 
-    # Convert the matplotlib figure directly to an optimized marimo visual block
-    mo.as_html(fig)
+    # Expose the figure object to marimo cell global output so it renders on screen
+    plot_output = mo.as_html(fig)
+    plt.close(fig)
 
-    return
+    # Display the plot element on the screen
+    plot_output
+
+    return (plot_output,)
 
 
 if __name__ == "__main__":
     app.run()
+
